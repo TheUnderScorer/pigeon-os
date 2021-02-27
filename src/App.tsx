@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TextBox } from './ui/library/TextBox/TextBox';
+import { Box } from './ui/library/Box/Box';
+import { Text } from './ui/library/Text/Text';
+import { AppWindow } from './ui/library/AppWindow/AppWindow';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWindow active id="test" title="Test app">
+      <Box mt={10}>
+        <TextBox id="test" label="Test field ;)" />
+      </Box>
+      <Box mt={10}>
+        <TextBox stacked id="test" label="Stacked field ;)" />
+      </Box>
+      <Text>Hello!</Text>
+    </AppWindow>
   );
 }
 

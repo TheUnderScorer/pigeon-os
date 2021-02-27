@@ -1,21 +1,11 @@
 import React from 'react';
-import { TextBox } from './ui/library/TextBox/TextBox';
-import { Box } from './ui/library/Box/Box';
-import { Text } from './ui/library/Text/Text';
-import { AppWindow } from './ui/library/AppWindow/AppWindow';
+import { useLoginStore } from './store/loginStore';
+import { Login } from './views/Login/Login';
 
 function App() {
-  return (
-    <AppWindow active id="test" title="Test app">
-      <Box mt={10}>
-        <TextBox id="test" label="Test field ;)" />
-      </Box>
-      <Box mt={10}>
-        <TextBox stacked id="test" label="Stacked field ;)" />
-      </Box>
-      <Text>Hello!</Text>
-    </AppWindow>
-  );
+  const isLoggedIn = useLoginStore((store) => store.isLogged);
+
+  return <>{!isLoggedIn && <Login />}</>;
 }
 
 export default App;

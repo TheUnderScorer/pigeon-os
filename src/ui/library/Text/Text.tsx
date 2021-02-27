@@ -108,7 +108,7 @@ const textVariants: Record<Font, Omit<TextProps, 'variant'>> = {
   },
   [Font.TitleBarTitle]: {
     fontWeight: 700,
-    fontSize: 3,
+    fontSize: 2,
   },
 };
 

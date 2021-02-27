@@ -7,8 +7,8 @@ import { ResizableBox } from 'react-resizable';
 export interface AppWindowProps
   extends Pick<TitleBarProps, 'title' | 'active'>,
     Pick<Partial<DraggableProps>, 'defaultPosition'> {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   id: string;
   draggable?: boolean;
   resizable?: boolean;
@@ -37,23 +37,27 @@ export const AppWindow = ({
       <ResizableBox
         minConstraints={[300, 300]}
         resizeHandles={resizable ? ['sw', 'se', 's'] : []}
-        width={width}
-        height={height}
+        width={width !== 'auto' ? parseInt(width!.toString()) : 600}
+        height={height !== 'auto' ? parseInt(height!.toString()) : 400}
       >
         <Box
+          display="flex"
+          flexDirection="column"
           overflow="auto"
-          height="100%"
+          height={height === 'auto' ? 'auto' : '100%'}
           width="100%"
           position="relative"
           className="window"
         >
           <TitleBar
             active={active}
-            cursor="move"
+            cursor={draggable ? 'move' : undefined}
             id={`handle-${id}`}
             title={title}
           />
-          <Box className="window-body">{children}</Box>
+          <Box className="window-body" flex={1}>
+            {children}
+          </Box>
         </Box>
       </ResizableBox>
     </Draggable>

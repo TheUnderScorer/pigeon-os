@@ -12,6 +12,7 @@ export interface AppColors {
   linkBlue: string;
   white: string;
   black: string;
+  error: string;
 
   [key: string]: string;
 }
@@ -44,6 +45,8 @@ const colors: AppColors = {
   desktopBlue: '#008080',
   white: '#ffffff',
   black: '#000000',
+  error: '#e50808',
+  selection: '#033562',
 };
 
 export const theme: AppTheme = {

@@ -25,7 +25,9 @@ export const TitleBar = ({
       })}
     >
       <Box ml={4} className="title-bar-text">
-        <Text variant={Font.TitleBarTitle}>{title}</Text>
+        <Text userSelect="none" variant={Font.TitleBarTitle}>
+          {title}
+        </Text>
       </Box>
       {children}
     </Box>

@@ -35,6 +35,7 @@ import {
   PointerEventsProperty,
   TransformProperty,
   TransitionProperty,
+  UserSelectProperty,
 } from 'csstype';
 
 export type BoxProps = ColorProps<AppTheme> &
@@ -60,6 +61,7 @@ export type BoxProps = ColorProps<AppTheme> &
     columnRule?: ColumnRuleProperty<string>;
     columnRuleColor?: ColumnRuleColorProperty;
     theme?: AppTheme;
+    userSelect?: UserSelectProperty;
   };
 
 export const Box = styled.div<BoxProps>(
@@ -84,6 +86,7 @@ export const Box = styled.div<BoxProps>(
       columnCount: true,
       columnGap: true,
       columnRule: true,
+      userSelect: true,
       columnRuleColor: {
         property: 'columnRuleColor',
         scale: 'colors',
@@ -91,3 +94,7 @@ export const Box = styled.div<BoxProps>(
     })
   )
 );
+
+export const Flex = styled(Box)<BoxProps>`
+  display: flex;
+`;

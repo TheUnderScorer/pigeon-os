@@ -10,5 +10,9 @@ export interface ImageProps extends BoxProps {
 
 export const Image = styled(Box)<ImageProps>`
   image-rendering: pixelated;
-  width: 100%;
+  width: ${(props) => props.width ?? '100%'};
 `;
+
+Image.defaultProps = {
+  draggable: false,
+};

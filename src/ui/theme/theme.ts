@@ -47,6 +47,9 @@ const colors: AppColors = {
   black: '#000000',
   error: '#e50808',
   selection: '#033562',
+  silver: 'silver',
+  lightGrey: '#f4f4f4',
+  darkGrey: '#4e4e4e',
 };
 
 export const theme: AppTheme = {

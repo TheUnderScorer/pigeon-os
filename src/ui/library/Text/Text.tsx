@@ -92,7 +92,7 @@ const textVariants: Record<Font, Omit<TextProps, 'variant'>> = {
     fontWeight: 700,
   },
   [Font.DesktopDisplaySmall]: {
-    fontSize: 6,
+    fontSize: 4,
     lineHeight: 1.2,
     fontWeight: 700,
   },

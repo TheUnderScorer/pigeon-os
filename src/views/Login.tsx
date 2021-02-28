@@ -1,7 +1,7 @@
 import React from 'react';
-import { AppWindow } from '../../ui/library/AppWindow/AppWindow';
-import { Centered } from '../../ui/library/Centered/Centered';
-import { LoginForm } from '../../components/LoginForm';
+import { AppWindow } from '../ui/library/AppWindow/AppWindow';
+import { Centered } from '../ui/library/Centered/Centered';
+import { LoginForm } from '../components/LoginForm';
 
 export const Login = () => {
   return (

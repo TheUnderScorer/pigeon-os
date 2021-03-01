@@ -19,7 +19,7 @@ export const useLoginStore = create<LoginStore>(
       },
     }),
     {
-      name: 'login-store',
+      name: 'loginStore',
     }
   )
 );

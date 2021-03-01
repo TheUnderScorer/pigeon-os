@@ -1,16 +1,25 @@
 import React from 'react';
-import { Box } from '../../ui/library/Box/Box';
+import { Flex } from '../../ui/library/Box/Box';
 import { Button } from '../../ui/library/Button/Button';
 import { ImageIcon } from '../../ui/library/ImageIcon/ImageIcon';
+import { PigeonOsApp } from '../../types/apps';
+import { TaskBarApp } from './App/TaskBarApp';
+import { useAppStatesStore } from '../../store/appStatesStore';
 
-export interface TaskBarProps {}
+export interface TaskBarProps {
+  apps: PigeonOsApp[];
+}
 
-export const TaskBar = (props: TaskBarProps) => {
+export const TaskBar = ({ apps }: TaskBarProps) => {
+  const openedAppIds = useAppStatesStore((store) => store.openedAppIds);
+
+  const openedApps = apps.filter((app) => openedAppIds.includes(app.id));
+
   return (
-    <Box
+    <Flex
       py={1}
       px={2}
-      zIndex={2}
+      zIndex={6}
       position="absolute"
       bottom={0}
       as="div"
@@ -25,6 +34,11 @@ export const TaskBar = (props: TaskBarProps) => {
       <Button px={4} minWidth="0">
         <ImageIcon width={50} icon="StartButton" />
       </Button>
-    </Box>
+      <Flex ml={4}>
+        {openedApps.map((app) => (
+          <TaskBarApp {...app} />
+        ))}
+      </Flex>
+    </Flex>
   );
 };

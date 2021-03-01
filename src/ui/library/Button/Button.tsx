@@ -55,6 +55,11 @@ export const Button = styled.button<ButtonProps>(
         [ButtonVariants.Outlined]: {
           bg: 'transparent',
         },
+        [ButtonVariants.SolidInserted]: {
+          boxShadow:
+            'inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey',
+          padding: '2px 11px 0 13px',
+        },
       },
     })
   )

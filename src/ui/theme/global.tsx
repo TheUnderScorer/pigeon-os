@@ -18,6 +18,10 @@ export const globalStyle = css`
   .react-resizable-handle {
     opacity: 0;
   }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const GlobalStyle = () => <Global styles={globalStyle} />;

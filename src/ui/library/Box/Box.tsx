@@ -33,6 +33,7 @@ import {
   ColumnRuleProperty,
   CursorProperty,
   PointerEventsProperty,
+  ResizeProperty,
   TransformProperty,
   TransitionProperty,
   UserSelectProperty,
@@ -62,6 +63,7 @@ export type BoxProps = ColorProps<AppTheme> &
     columnRuleColor?: ColumnRuleColorProperty;
     theme?: AppTheme;
     userSelect?: UserSelectProperty;
+    resize?: ResizeProperty;
   };
 
 export const Box = styled.div<BoxProps>(
@@ -87,6 +89,7 @@ export const Box = styled.div<BoxProps>(
       columnGap: true,
       columnRule: true,
       userSelect: true,
+      resize: true,
       columnRuleColor: {
         property: 'columnRuleColor',
         scale: 'colors',

@@ -5,6 +5,7 @@ import { ImageIcon } from '../../ui/library/ImageIcon/ImageIcon';
 import { PigeonOsApp } from '../../types/apps';
 import { TaskBarApp } from './App/TaskBarApp';
 import { useAppStatesStore } from '../../store/appStatesStore';
+import { Text } from '../../ui/library/Text/Text';
 
 export interface TaskBarProps {
   apps: PigeonOsApp[];

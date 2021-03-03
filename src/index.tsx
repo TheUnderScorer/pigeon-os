@@ -5,12 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './providers/ThemeProvider';
 import '98.css/dist/98.css';
 import 'react-resizable/css/styles.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

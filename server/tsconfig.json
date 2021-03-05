@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2020",
+    "sourceMap": true,
+    "outDir": "build",
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths"
+      }
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": ["src/**/*", "types"]
+}

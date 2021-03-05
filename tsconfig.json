@@ -17,10 +17,22 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["node", "jest"],
+    "baseUrl": ".",
+    "paths": {
+      "@lib/*": ["./lib/*"]
+    }
   },
   "include": [
-    "src"
+    "scripts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.json",
+    "tests",
+    "typings"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

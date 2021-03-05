@@ -1,0 +1,15 @@
+import ComputerExplorer2 from './computer_explorer-2.png';
+import DirectoryClosed3 from './directory_closed-3.png';
+import StartButton from './start-button.png';
+import Camera0 from './camera-0.png';
+import Loading from './loading.gif';
+
+export const imageIcons = {
+  ComputerExplorer2,
+  DirectoryClosed3,
+  StartButton,
+  Camera0,
+  Loading,
+};
+
+export type ImageIconName = keyof typeof imageIcons;

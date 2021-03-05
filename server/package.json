@@ -1,0 +1,17 @@
+{
+  "name": "pigeon-os-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "npm run clean && ttsc --pretty",
+    "start": "node build/server/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "ttypescript": "^1.5.12"
+  }
+}

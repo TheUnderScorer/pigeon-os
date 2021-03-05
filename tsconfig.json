@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "experimentalDecorators": true,
+    "target": "ES2019",
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,7 +23,13 @@
     "baseUrl": ".",
     "paths": {
       "@lib/*": ["./lib/*"]
-    }
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings",
+      "**/typings",
+      "**/node_modules/@types"
+    ]
   },
   "include": [
     "scripts",

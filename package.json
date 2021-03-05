@@ -4,10 +4,15 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "scripts": {
     "start:client": "cd client && npm run start",
+    "dev:server": "cd server && npm run dev",
     "lint": "eslint . --format=pretty --ext .ts,tsx",
     "lint:fix": "eslint . --format=pretty --ext .ts,tsx --fix",
     "test": "jest --config jest.config.js --runInBand --env=jsdom"
   },
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -41,5 +46,9 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "joiful": "^3.0.0",
+    "reflect-metadata": "^0.1.13"
   }
 }

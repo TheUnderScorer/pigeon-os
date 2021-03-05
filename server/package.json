@@ -6,16 +6,22 @@
   "scripts": {
     "clean": "rm -rf build",
     "build": "npm run clean && ttsc --pretty",
-    "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts --transpileOnly --skipLibCheck",
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts --transpileOnly -P tsconfig.json",
     "start": "node build/server/src/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.0",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "ttypescript": "^1.5.12"
   },
   "dependencies": {
-    "fastify": "^3.13.0"
+    "awilix": "^4.3.3",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.13.0",
+    "joiful": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "middie": "^5.2.0"
   }
 }

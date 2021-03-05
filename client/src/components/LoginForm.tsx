@@ -5,24 +5,21 @@ import { Button } from '../ui/library/Button/Button';
 import { Box, Flex } from '../ui/library/Box/Box';
 import LoginImage from '../ui/assets/LoginLogo.png';
 import { Image } from '../ui/library/Image/Image';
-import { LoginInput } from '../types/login';
 import { useLoginStore } from '../store/loginStore';
 import { TreeViewSelection } from '../ui/library/TreeView/Selection/TreeViewSelection';
 import { users } from '../constants/users';
-import { ImageIcon } from '../ui/library/ImageIcon/ImageIcon';
-
-export interface LoginFormProps {}
+import { LoginInput } from '@lib/types/user';
 
 // TODO Validate password on server
 const password = 'pigeon';
 
-export const LoginForm = (props: LoginFormProps) => {
+export const LoginForm = () => {
   const form = useForm<LoginInput>();
   const setIsLoggedIn = useLoginStore((store) => store.setIsLoggedIn);
 
   const handleSubmit = useCallback(
     (input: LoginInput) => {
-      if (input.password === password && input.user === 'Pigeon') {
+      if (input.password === password && input.userName === 'Pigeon') {
         setIsLoggedIn(true);
       } else {
         form.setError('password', { message: 'Invalid password' });
@@ -47,7 +44,7 @@ export const LoginForm = (props: LoginFormProps) => {
             value: user,
             label: user,
           }))}
-          name="user"
+          name="userName"
           form={form}
           padding="0 !important"
           minHeight={60}

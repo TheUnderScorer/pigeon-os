@@ -1,6 +1,25 @@
-import { sum } from "@lib/math";
+import fastify from 'fastify';
+import { sum } from '@lib/math';
 
-console.log("I am alive");
-console.log(sum(1, 2));
+const server = fastify({
+  logger: true,
+});
 
-export const test = 5;
+const port = process.env.PORT || 5000;
+
+// Dummy function to keep correct imports
+sum(1, 2);
+
+server.route({
+  url: '/',
+  method: 'GET',
+  handler: async () => {
+    return {
+      hello: 'world',
+    };
+  },
+});
+
+server.listen(port).then((url) => {
+  console.log(`Server started on ${url}`);
+});

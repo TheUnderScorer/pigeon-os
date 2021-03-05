@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf build",
     "build": "npm run clean && ttsc --pretty",
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts --transpileOnly --skipLibCheck",
     "start": "node build/server/src/index.js"
   },
   "author": "",
@@ -13,5 +14,8 @@
   "devDependencies": {
     "@zerollup/ts-transform-paths": "^1.7.18",
     "ttypescript": "^1.5.12"
+  },
+  "dependencies": {
+    "fastify": "^3.13.0"
   }
 }

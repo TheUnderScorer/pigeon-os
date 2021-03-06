@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
 import { serverRoutes } from '@lib/serverRoutes';
-import { EnsureAuth } from '../middleware/ensureAuth';
+import { EnsureAuth } from '../../../middleware/ensureAuth';
 
 export interface MeRouteDependencies {
   ensureAuth: EnsureAuth;

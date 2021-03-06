@@ -1,8 +1,8 @@
-import { LoginInput, User } from '@lib/types/user';
+import { LoginInput } from '@lib/types/user';
 import { InvalidLoginCredentialsError } from '@lib/errors/InvalidLoginCredentialsError';
 
 export interface HandleLoginDependencies {
-  appUser: User;
+  appUser: LoginInput;
 }
 
 export const makeAuthorize = ({ appUser }: HandleLoginDependencies) => (

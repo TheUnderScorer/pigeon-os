@@ -1,6 +1,6 @@
 import { RouteHandler } from 'fastify';
 import { UnauthorizedError } from '@lib/errors/UnauthorizedError';
-import { ValidateToken } from '../auth/validateToken';
+import { ValidateToken } from '../app/auth/validateToken';
 
 export interface AuthorizedDependencies {
   validateToken: ValidateToken;

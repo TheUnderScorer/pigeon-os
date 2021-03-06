@@ -1,4 +1,137 @@
 GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTAzMjUxNH0.PZmfxw2uwHA_uYVJD-9EMmeCBCrvKDtszxNMnEM27Vg
+
+<> 2021-03-06T130834-1.200.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-06T130834.200.json
+
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTAzMjQxMn0.TTkb0FjfpLN_MJ2cKDkFG_2uCTvIDUgw_MOZfroWwf4
+
+<> 2021-03-06T130652-1.200.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-06T130652.200.json
+
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTAzMjE1NH0.3z-UtCZLVvTYjsRLjlhbt6A0xfVJckHFOgNCYdYcRTc
+
+<> 2021-03-06T130235.200.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-06T130234.200.json
+
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InBpZ2VvbiIsInVzZXJOYW1lIjoiUGlnZW9uIiwiaWF0IjoxNjE1MDMyMDM0fQ.rxPrDIsc33FwGvxmUUahppRIw9GiFFrxEwJTUqaZgKc
+
+<> 2021-03-06T130035-1.200.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-06T130035.200.json
+
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNDk3NDY1M30.EWbG9GgQAvHoEhj5qK8yWQ4DkUBGWDopsl3rgUzD1Gs
+
+<> 2021-03-05T210419.400.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-05T210413.200.json
+
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNDk3NDYxMn0.mJ8pJwYTOP1X978PmEqRonMnd2_mQqOaoHb2DqtEuN4
+
+<> 2021-03-05T210333-1.400.json
+
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer {{authToken}}
+
+<> 2021-03-05T210333.400.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-05T210332-1.200.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-05T210332.200.json
+
+###
+
+GET http://localhost:5000/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InBpZ2VvbiIsInVzZXJOYW1lIjoiUGlnZW9uIiwiaWF0IjoxNjE0OTYzNDg4fQ.wYTdOj_lpn_amng6fnvYG0GU-t0JX6ed2d8NUU__oBY
 
 <> 2021-03-05T175808-1.200.json

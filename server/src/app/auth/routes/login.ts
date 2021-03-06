@@ -1,28 +1,33 @@
 import { FastifyInstance } from 'fastify';
-import { Authorize } from '../auth/authorize';
+import { Authorize } from '../authorize';
 import { serverRoutes } from '@lib/serverRoutes';
-import { bodySchemaValidator } from '../middleware/schemaValidator';
+import { bodySchemaValidator } from '../../../middleware/schemaValidator';
 import { LoginInput } from '@lib/schema/auth/LoginInput';
 import { LoginResult } from '@lib/types/user';
-import { createTokenForUser } from '../auth/createToken';
+import { CreateTokenForUser } from '../createToken';
 
 export interface LoginRouteDependencies {
   authorize: Authorize;
+  createToken: CreateTokenForUser;
+  googleToken: string;
 }
 
-export const makeLoginRoute = ({ authorize }: LoginRouteDependencies) => async (
-  fastify: FastifyInstance
-) => {
+export const makeLoginRoute = ({
+  authorize,
+  createToken,
+}: LoginRouteDependencies) => async (fastify: FastifyInstance) => {
   fastify.route({
     url: serverRoutes.login,
     method: 'POST',
     handler: async (request) => {
-      const body = request.body as LoginInput;
+      const input = request.body as LoginInput;
 
-      authorize(body);
+      authorize(input);
 
       return {
-        token: createTokenForUser(body),
+        token: createToken({
+          userName: input.userName,
+        }),
       } as LoginResult;
     },
     preHandler: [bodySchemaValidator(LoginInput)],

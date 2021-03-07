@@ -1,4 +1,4 @@
-import { LoginInput as LoginInputInterface } from '@lib/types/user';
+import { LoginInputInterface as LoginInputInterface } from '@lib/types/user';
 import * as jf from 'joiful';
 import { BaseSchema } from '@lib/schema/BaseSchema';
 

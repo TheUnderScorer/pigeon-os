@@ -5,27 +5,21 @@ import { Button } from '../ui/library/Button/Button';
 import { Box, Flex } from '../ui/library/Box/Box';
 import LoginImage from '../ui/assets/LoginLogo.png';
 import { Image } from '../ui/library/Image/Image';
-import { useLoginStore } from '../store/loginStore';
 import { TreeViewSelection } from '../ui/library/TreeView/Selection/TreeViewSelection';
 import { users } from '../constants/users';
-import { LoginInput } from '@lib/types/user';
-
-// TODO Validate password on server
-const password = 'pigeon';
+import { LoginInputInterface } from '@lib/types/user';
+import { useLogin } from '../hooks/api/useLogin';
+import { Text } from '../ui/library/Text/Text';
 
 export const LoginForm = () => {
-  const form = useForm<LoginInput>();
-  const setIsLoggedIn = useLoginStore((store) => store.setIsLoggedIn);
+  const loginMutation = useLogin();
+  const form = useForm<LoginInputInterface>();
 
   const handleSubmit = useCallback(
-    (input: LoginInput) => {
-      if (input.password === password && input.userName === 'Pigeon') {
-        setIsLoggedIn(true);
-      } else {
-        form.setError('password', { message: 'Invalid password' });
-      }
+    async (input: LoginInputInterface) => {
+      await loginMutation.mutateAsync(input);
     },
-    [form, setIsLoggedIn]
+    [loginMutation]
   );
 
   return (
@@ -52,7 +46,7 @@ export const LoginForm = () => {
             rules: {
               required: 'Select user',
             },
-            defaultValue: users[0],
+            defaultValue: '',
           }}
         />
       </Box>
@@ -71,8 +65,15 @@ export const LoginForm = () => {
         />
       </Box>
 
-      <Flex justifyContent="flex-end" mt={4}>
-        <Button type="submit">OK</Button>
+      <Flex alignItems="center" justifyContent="flex-end" mt={4}>
+        {loginMutation.error && (
+          <Text mr={2} color="error">
+            {loginMutation.error.message}
+          </Text>
+        )}
+        <Button disabled={form.formState.isSubmitting} type="submit">
+          OK
+        </Button>
       </Flex>
     </Box>
   );

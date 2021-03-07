@@ -14,6 +14,7 @@ export interface WindowProps
   resizable?: boolean;
   titleBarContent?: ReactNode;
   BoxProps?: Omit<BoxProps, 'as'>;
+  icon?: ReactNode;
 }
 
 export const Window = forwardRef<
@@ -36,6 +37,7 @@ export const Window = forwardRef<
       active,
       BoxProps,
       titleBarContent,
+      icon,
     },
     ref
   ) => {
@@ -50,14 +52,14 @@ export const Window = forwardRef<
         <Box
           minWidth={400}
           minHeight={400}
-          resize={resizable ? 'both' : 'none'}
           display="flex"
           flexDirection="column"
-          overflow="auto"
           height={height}
           width={width}
           position="relative"
           className="window"
+          resize={resizable ? 'both' : 'none'}
+          overflow="auto"
           zIndex={active ? theme.zIndexes.windowFocused : theme.zIndexes.window}
           {...BoxProps}
           ref={ref}
@@ -67,10 +69,11 @@ export const Window = forwardRef<
             cursor={draggable ? 'move' : undefined}
             id={`handle-${id}`}
             title={title}
+            icon={icon}
           >
             {titleBarContent}
           </TitleBar>
-          <Box className="window-body" flex={1}>
+          <Box overflow="hidden" className="window-body" flex={1}>
             {children}
           </Box>
         </Box>

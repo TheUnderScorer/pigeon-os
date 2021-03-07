@@ -3,9 +3,9 @@ import { PigeonOsApp } from '../../../types/apps';
 import { Button } from '../../../ui/library/Button/Button';
 import { Text } from '../../../ui/library/Text/Text';
 import { ImageIcon } from '../../../ui/library/ImageIcon/ImageIcon';
-import { useIsAppFocused } from '../../../hooks/useIsAppFocused';
+import { useIsAppFocused } from '../../../hooks/apps/useIsAppFocused';
 import { ButtonVariants } from '../../../ui/library/Button/Button.types';
-import { useAppRef } from '../../../hooks/useAppRef';
+import { useAppRef } from '../../../hooks/apps/useAppRef';
 
 export interface TaskBarAppProps extends PigeonOsApp {}
 

@@ -6,15 +6,18 @@ import { ThemeProvider } from './providers/ThemeProvider';
 import '98.css/dist/98.css';
 import 'react-resizable/css/styles.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ApiClientProvider } from './providers/ApiClientProvider';
 
 const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+      <ApiClientProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ApiClientProvider>
     </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -39,7 +39,7 @@ export const TaskBar = ({ apps }: TaskBarProps) => {
       </Button>
       <Flex ml={4}>
         {openedApps.map((app) => (
-          <Box ml={2}>
+          <Box key={app.id} ml={2}>
             <TaskBarApp {...app} />
           </Box>
         ))}

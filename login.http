@@ -10,5 +10,5 @@ Content-Type: application/json
 
 ###
 
-http://localhost:5000/me
+http://localhost:5000/get-photos
 Authorization: Bearer {{authToken}}

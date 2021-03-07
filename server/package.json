@@ -20,7 +20,9 @@
     "awilix": "^4.3.3",
     "dotenv": "^8.2.0",
     "fastify": "^3.13.0",
+    "fastify-cors": "^5.2.0",
     "googleapis": "^67.1.1",
+    "googlephotos": "^0.3.4",
     "joiful": "^3.0.0",
     "jsonwebtoken": "^8.5.1",
     "middie": "^5.2.0"

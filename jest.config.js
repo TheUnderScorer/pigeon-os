@@ -15,9 +15,9 @@ module.exports = {
   // ---------------
   roots: ['<rootDir>/client', '<rootDir>/server', '<rootDir>/lib'],
   testMatch: ['**/*.test.ts?(x)'],
-  /*  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: "<rootDir>/",
-  }),*/
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/',
+  }),
 
   // Coverage
   // ---------------

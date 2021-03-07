@@ -16,6 +16,8 @@ export const makeLoginRoute = ({
   authorize,
   createToken,
 }: LoginRouteDependencies) => async (fastify: FastifyInstance) => {
+  
+
   fastify.route({
     url: serverRoutes.login,
     method: 'POST',

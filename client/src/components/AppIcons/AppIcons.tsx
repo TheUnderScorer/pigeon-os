@@ -1,8 +1,8 @@
 import React, { MutableRefObject } from 'react';
-import { PigeonOsApp } from '../types/apps';
-import { Box, Flex } from '../ui/library/Box/Box';
-import { AppIcon } from '../components/AppIcon/AppIcon';
-import { useAppIcon } from '../components/AppIcons/useAppIcon';
+import { PigeonOsApp } from '../../types/apps';
+import { Box, Flex } from '../../ui/library/Box/Box';
+import { AppIcon } from '../AppIcon/AppIcon';
+import { useAppIcon } from './useAppIcon';
 
 export interface AppIconsProps {
   apps: PigeonOsApp[];
@@ -19,7 +19,7 @@ export const AppIcons = ({ apps }: AppIconsProps) => {
   return (
     <Flex flexDirection="column">
       {apps.map((app) => (
-        <Box mb={3}>
+        <Box key={app.id} mb={3}>
           <AppIcon
             ref={
               selectedApp === app.id

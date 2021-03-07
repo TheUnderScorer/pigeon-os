@@ -64,6 +64,8 @@ export type BoxProps = ColorProps<AppTheme> &
     theme?: AppTheme;
     userSelect?: UserSelectProperty;
     resize?: ResizeProperty;
+    href?: string;
+    target?: string;
   };
 
 export const Box = styled.div<BoxProps>(

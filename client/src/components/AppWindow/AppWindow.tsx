@@ -5,11 +5,12 @@ import { useEvent, useMount, useUnmount } from 'react-use';
 import { useAppStatesStore } from '../../store/appStatesStore';
 import { useAppRefsStore } from '../../store/appRefsStore';
 import { Button } from '../../ui/library/Button/Button';
-import { useCloseApp } from '../../hooks/useCloseApp';
+import { useCloseApp } from '../../hooks/apps/useCloseApp';
+import { ImageIcon } from '../../ui/library/ImageIcon/ImageIcon';
 
 export interface AppWindowProps extends PigeonOsApp {}
 
-export const AppWindow = ({ name, id, content }: AppWindowProps) => {
+export const AppWindow = ({ name, id, content, icon }: AppWindowProps) => {
   const closeApp = useCloseApp(id);
 
   const addRef = useAppRefsStore((store) => store.addRef);
@@ -64,6 +65,8 @@ export const AppWindow = ({ name, id, content }: AppWindowProps) => {
       title={name}
       active={focusedAppId === id}
       titleBarContent={<Button onClick={closeApp} aria-label="Close" />}
+      resizable
+      icon={<ImageIcon width={15} height={15} icon={icon} />}
     >
       {content()}
     </Window>

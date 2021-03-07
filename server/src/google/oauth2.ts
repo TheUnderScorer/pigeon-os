@@ -1,4 +1,5 @@
 import { google } from 'googleapis';
+import { OAuth2Client } from 'google-auth-library';
 
 export interface CreateGoogleOauth2Deps {
   googleClientId: string;
@@ -14,7 +15,7 @@ export const createGoogleOauth2 = ({
   googleSecret,
   googleAccessToken,
   googleRefreshToken,
-}: CreateGoogleOauth2Deps) => {
+}: CreateGoogleOauth2Deps): OAuth2Client => {
   const oauth = new google.auth.OAuth2(
     googleClientId,
     googleSecret,
@@ -24,6 +25,7 @@ export const createGoogleOauth2 = ({
   oauth.setCredentials({
     access_token: googleAccessToken,
     refresh_token: googleRefreshToken,
+    scope: 'https://www.googleapis.com/auth/photoslibrary.readonly',
   });
 
   return oauth;

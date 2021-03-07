@@ -1,5 +1,5 @@
-import { useAppStatesStore } from '../store/appStatesStore';
-import { useAppRefsStore } from '../store/appRefsStore';
+import { useAppStatesStore } from '../../store/appStatesStore';
+import { useAppRefsStore } from '../../store/appRefsStore';
 import { useCallback } from 'react';
 
 export const useCloseApp = (id: string) => {

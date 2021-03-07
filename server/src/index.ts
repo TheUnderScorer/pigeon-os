@@ -5,7 +5,7 @@ import { createServer } from './server';
 config();
 
 async function main() {
-  const container = await createServer();
+  const container = await createServer(process.env);
   const port = container.resolve<number>('port');
   const server = container.resolve<FastifyInstance>('server');
 

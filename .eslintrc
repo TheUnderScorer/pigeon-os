@@ -46,6 +46,7 @@
     "@typescript-eslint/no-inferrable-types": "off",
     "react/display-name": "off",
     "no-unused-vars": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

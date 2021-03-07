@@ -1,6 +1,6 @@
 import { MutableRefObject, useCallback, useRef, useState } from 'react';
 import { useClickAway, useTimeoutFn } from 'react-use';
-import { useOpenApp } from '../../hooks/useOpenApp';
+import { useOpenApp } from '../../hooks/apps/useOpenApp';
 
 export const useAppIcon = () => {
   const openApp = useOpenApp();

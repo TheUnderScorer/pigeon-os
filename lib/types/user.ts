@@ -2,7 +2,7 @@ export interface User {
   userName: string;
 }
 
-export interface LoginInput extends Pick<User, 'userName'> {
+export interface LoginInputInterface extends Pick<User, 'userName'> {
   password: string;
 }
 

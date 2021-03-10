@@ -1,3 +1,63 @@
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+<> 2021-03-06T172552.200.json
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+<> 2021-03-06T172224.500.json
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+<> 2021-03-06T171715.500.json
+
+###
+
+GET http://localhost:5000/get-photos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTA0NzM3M30.DRSFeo08NlZ5xZTQd0RxzQED0SXb5NklvaojbI1wXW4
+
+<> 2021-03-06T171629.500.json
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "pigeon",
+  "userName": "Pigeon"
+}
+
+<> 2021-03-06T171613.200.json
+
+###
+
 GET http://localhost:5000/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBpZ2VvbiIsImlhdCI6MTYxNTAzMjUxNH0.PZmfxw2uwHA_uYVJD-9EMmeCBCrvKDtszxNMnEM27Vg
 
@@ -423,40 +483,6 @@ Content-Type: application/json
 ###
 
 POST http://localhost:5000/login
-Content-Type: application/json
-
-{
-  "password": "pigeon",
-  "userName": "Pigeon"
-}
-
-###
-
-POST http://localhost:5000/login
-Content-Type: application/json
-
-{
-  "password": "pigeon",
-  "userName": "Pigeon"
-}
-
-<> 2021-03-05T170458.500.json
-
-###
-
-GET http://localhost:5000/login
-Content-Type: application/json
-
-{
-  "password": "pigeon",
-  "userName": "Pigeon"
-}
-
-<> 2021-03-05T170450.404.json
-
-###
-
-GET http://localhost:3000/login
 Content-Type: application/json
 
 {

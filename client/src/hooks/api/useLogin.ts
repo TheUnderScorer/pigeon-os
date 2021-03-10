@@ -5,8 +5,11 @@ import { LoginInput } from '@lib/schema/auth/LoginInput';
 import { useTokensStore } from '../../store/tokensStore';
 import { ApiError } from '../../api/ApiError';
 import { meQuery } from './useMe';
+import { useHistory } from 'react-router-dom';
+import { clientRoutes } from '@lib/clientRoutes';
 
 export const useLogin = () => {
+  const history = useHistory();
   const client = useQueryClient();
 
   const { apiClient } = useApiClient();
@@ -23,6 +26,8 @@ export const useLogin = () => {
           await client.invalidateQueries({
             queryKey: meQuery,
           });
+
+          history.push(clientRoutes.desktop);
         }
       },
     }

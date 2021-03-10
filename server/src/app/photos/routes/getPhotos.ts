@@ -19,7 +19,7 @@ export const makeGetPhotosRoute = ({
     method: 'GET',
     preHandler: [ensureAuth, querySchemaValidator(FetchPhotosPayload)],
     handler: async (request) => {
-      return fetchPhotos(request.body as FetchPhotosPayload);
+      return fetchPhotos(request.query as FetchPhotosPayload);
     },
   });
 };

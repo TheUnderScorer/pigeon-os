@@ -36,7 +36,7 @@ export const useAppIcon = () => {
 
       setSelectedApp(null);
     },
-    [shouldUnselectAppOnClick]
+    [openApp, shouldUnselectAppOnClick]
   );
 
   useClickAway(selectedAppRef as MutableRefObject<HTMLDivElement>, () => {

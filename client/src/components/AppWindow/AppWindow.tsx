@@ -1,7 +1,7 @@
 import React, { MutableRefObject, useEffect, useRef } from 'react';
 import { PigeonOsApp } from '../../types/apps';
 import { Window } from '../../ui/library/Window/Window';
-import { useEvent, useMount, useUnmount } from 'react-use';
+import { useMount, useUnmount } from 'react-use';
 import { useAppStatesStore } from '../../store/appStatesStore';
 import { useAppRefsStore } from '../../store/appRefsStore';
 import { Button } from '../../ui/library/Button/Button';

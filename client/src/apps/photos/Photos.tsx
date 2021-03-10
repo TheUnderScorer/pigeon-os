@@ -1,19 +1,24 @@
-import React, { Fragment } from 'react';
-import { Box } from '../../ui/library/Box/Box';
+import React, { Fragment, MutableRefObject } from 'react';
+import { Box, Flex } from '../../ui/library/Box/Box';
 import { Loading } from '../../ui/library/Loading/Loading';
 import { useGooglePhotos } from '../../hooks/api/useGooglePhotos';
 import { Centered } from '../../ui/library/Centered/Centered';
 import { Image } from '../../ui/library/Image/Image';
 import { Text } from '../../ui/library/Text/Text';
+import { useInfiniteScroll } from '../../hooks/useInfiniteScroll';
 
-export interface PhotosProps {}
-
-export const Photos = (props: PhotosProps) => {
+export const Photos = () => {
   const query = useGooglePhotos();
+
+  const scrollRef = useInfiniteScroll({
+    hasNext: Boolean(query.hasNextPage),
+    onScroll: query.fetchNextPage,
+    loading: query.isFetching,
+  });
 
   return (
     <Box height="100%" display="flex">
-      {query.isLoading && !query.isFetchedAfterMount && (
+      {query.isLoading && (
         <Centered>
           <Loading width={80} />
         </Centered>
@@ -31,6 +36,7 @@ export const Photos = (props: PhotosProps) => {
         flexWrap="wrap"
         overflow="auto"
         flex={1}
+        ref={scrollRef as MutableRefObject<HTMLDivElement>}
       >
         {query.data?.pages?.map((page) => (
           <Fragment key={page.nextPageToken}>
@@ -55,6 +61,11 @@ export const Photos = (props: PhotosProps) => {
             ))}
           </Fragment>
         ))}
+        {query.isFetching && (
+          <Flex width="100%" justifyContent="center">
+            <Loading width={50} />
+          </Flex>
+        )}
       </Box>
     </Box>
   );

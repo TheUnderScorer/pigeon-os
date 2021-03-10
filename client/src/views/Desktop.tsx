@@ -4,11 +4,8 @@ import { TaskBar } from '../components/TaskBar/TaskBar';
 import { AppIcons } from '../components/AppIcons/AppIcons';
 import { apps } from '../apps/apps';
 import { AppWindowsManager } from '../components/AppWindowsManager/AppWindowsManager';
-import { sum } from '@lib/math';
 
-export interface DesktopProps {}
-
-export const Desktop = (props: DesktopProps) => {
+export const Desktop = () => {
   return (
     <>
       <AppWindowsManager apps={apps} />

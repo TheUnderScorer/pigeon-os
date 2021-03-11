@@ -26,7 +26,7 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Publish
-        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        uses: jsmrcaga/action-netlify-deploy@v1.5.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

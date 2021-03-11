@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/TheUnderScorer/pigeon-os/compare/client-1.0.0...client-1.1.0) (2021-03-11)
+
+
+### Features
+
+* **client:** Add correct favicon ([9650cd4](https://github.com/TheUnderScorer/pigeon-os/commit/9650cd4975f19f48872b96742f0290a74840891c))
+
 # 1.0.0 (2021-03-11)
 
 

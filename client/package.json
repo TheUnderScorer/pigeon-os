@@ -1,5 +1,5 @@
 {
-  "name": "pigeon-os-client",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
@@ -40,7 +40,9 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build"
+    "build": "craco build",
+    "release": "semantic-release",
+    "release:dry": "semantic-release -d"
   },
   "browserslist": {
     "production": [

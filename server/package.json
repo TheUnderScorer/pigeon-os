@@ -1,5 +1,5 @@
 {
-  "name": "pigeon-os-server",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,9 @@
     "clean": "rm -rf build",
     "build": "npm run clean && ttsc --pretty",
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts --transpileOnly -P tsconfig.json",
-    "start": "node build/server/src/index.js"
+    "start": "node build/server/src/index.js",
+    "release": "semantic-release",
+    "release:dry": "semantic-release -d"
   },
   "author": "",
   "license": "ISC",

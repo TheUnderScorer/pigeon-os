@@ -56,7 +56,6 @@ export const createServer = async (env: Record<string, any>) => {
   });
 
   const googleOauth = container.resolve<OAuth2Client>('googleOauth');
-  const accessToken = await googleOauth.refreshAccessToken();
 
   googleOauth.on('tokens', (tokens) => {
     if (tokens.access_token) {
@@ -66,9 +65,13 @@ export const createServer = async (env: Record<string, any>) => {
     }
   });
 
-  container.register({
-    googleAccessToken: asValue(accessToken.credentials.access_token),
-  });
+  if (googleOauth.credentials.refresh_token) {
+    const result = await googleOauth.refreshAccessToken();
+
+    container.register({
+      googleAccessToken: asValue(result.credentials.access_token),
+    });
+  }
 
   server.setErrorHandler(errorHandler);
 

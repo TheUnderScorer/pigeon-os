@@ -12,12 +12,12 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Set Node.js 13.x
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
           node-version: 15.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --legacy-peer-deps
 
       - name: Build
         run: npm run build
@@ -29,12 +29,12 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Set Node.js 13.x
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
           node-version: 15.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --legacy-peer-deps
 
       - name: Lint
         run: npm run lint
@@ -46,12 +46,12 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Set Node.js 13.x
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
           node-version: 15.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --legacy-peer-deps
 
       - name: Tests
         run: npm run test

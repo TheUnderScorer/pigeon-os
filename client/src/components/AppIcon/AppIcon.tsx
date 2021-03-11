@@ -23,7 +23,7 @@ export const AppIcon = forwardRef<HTMLDivElement, AppIconProps>(
         alignItems="center"
         flexDirection="column"
       >
-        <ImageIcon mb={3} width={30} icon={icon} />
+        <ImageIcon userSelect="none" mb={3} width={30} icon={icon} />
         <Text userSelect="none" color="white">
           {name}
         </Text>

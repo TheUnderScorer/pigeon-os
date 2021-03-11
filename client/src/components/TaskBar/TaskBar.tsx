@@ -6,6 +6,7 @@ import { PigeonOsApp } from '../../types/apps';
 import { TaskBarApp } from './App/TaskBarApp';
 import { useAppStatesStore } from '../../store/appStatesStore';
 import { useTheme } from '@emotion/react';
+import { TaskBarStart } from './Start/TaskBarStart';
 
 export interface TaskBarProps {
   apps: PigeonOsApp[];
@@ -34,9 +35,7 @@ export const TaskBar = ({ apps }: TaskBarProps) => {
       borderTopColor="lightGrey"
       boxShadow="inset 1px 0 #fff"
     >
-      <Button px={4} minWidth="0">
-        <ImageIcon width={50} icon="StartButton" />
-      </Button>
+      <TaskBarStart />
       <Flex ml={4}>
         {openedApps.map((app) => (
           <Box key={app.id} ml={2}>

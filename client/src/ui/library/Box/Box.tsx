@@ -32,6 +32,8 @@ import {
   ColumnRuleColorProperty,
   ColumnRuleProperty,
   CursorProperty,
+  ListStylePositionProperty,
+  ListStyleProperty,
   PointerEventsProperty,
   ResizeProperty,
   TransformProperty,
@@ -66,6 +68,7 @@ export type BoxProps = ColorProps<AppTheme> &
     resize?: ResizeProperty;
     href?: string;
     target?: string;
+    listStyle?: ListStyleProperty;
   };
 
 export const Box = styled.div<BoxProps>(
@@ -92,6 +95,7 @@ export const Box = styled.div<BoxProps>(
       columnRule: true,
       userSelect: true,
       resize: true,
+      listStyle: true,
       columnRuleColor: {
         property: 'columnRuleColor',
         scale: 'colors',

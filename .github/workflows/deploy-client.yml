@@ -26,10 +26,11 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Publish
-        uses: netlify/actions/build@master
-        env:
+        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_BASE: client
-          NETLIFY_CMD: npm run build
-          NETLIFY_DIR: client/build
+          build_command: npm run build:client
+          build_directory: client/build
+          NETLIFY_DEPLOY_TO_PROD: true

@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 15.x
 
+      - name: Setup npm
+        run: npm install -g npm@7
+
       - name: Configure CI Git User
         run: |
           git config --global user.name 'TheUnderScorer'

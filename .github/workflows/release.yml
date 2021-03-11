@@ -28,7 +28,7 @@ jobs:
           git config --global user.email 'przemyslawzydek@gmail.com'
           git remote set-url origin https://TheUnderScorer:$GITHUB_TOKEN@github.com/TheUnderScorer/pigeon-os
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
@@ -39,5 +39,5 @@ jobs:
       - name: Release packages
         run: npm run release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}

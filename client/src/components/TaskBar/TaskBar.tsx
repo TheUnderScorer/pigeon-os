@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, Flex } from '../../ui/library/Box/Box';
-import { Button } from '../../ui/library/Button/Button';
-import { ImageIcon } from '../../ui/library/ImageIcon/ImageIcon';
 import { PigeonOsApp } from '../../types/apps';
 import { TaskBarApp } from './App/TaskBarApp';
 import { useAppStatesStore } from '../../store/appStatesStore';

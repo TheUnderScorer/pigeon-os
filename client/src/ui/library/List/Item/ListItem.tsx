@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 
 export interface ListItemProps extends Omit<BoxProps, 'as'> {
   icon?: ReactNode;
-  selectable?: boolean;
 }
 
 const StyledListItem = styled(Box)`
@@ -21,7 +20,6 @@ const StyledListItem = styled(Box)`
 export const ListItem = ({
   children,
   icon,
-  selectable,
   ...props
 }: PropsWithChildren<ListItemProps>) => {
   return (

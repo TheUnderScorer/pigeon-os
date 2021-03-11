@@ -32,7 +32,6 @@ import {
   ColumnRuleColorProperty,
   ColumnRuleProperty,
   CursorProperty,
-  ListStylePositionProperty,
   ListStyleProperty,
   PointerEventsProperty,
   ResizeProperty,

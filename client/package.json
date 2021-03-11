@@ -39,8 +39,8 @@
     "zustand": "^3.3.2"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "SKIP_PREFLIGHT_CHECK=true craco start",
+    "build": "SKIP_PREFLIGHT_CHECK=true craco build",
     "release": "semantic-release",
     "release:dry": "semantic-release -d"
   },

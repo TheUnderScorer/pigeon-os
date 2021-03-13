@@ -37,5 +37,5 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "pigeon-os-api"
           heroku_email: "przemyslawzydek@gmail.com"
-          procfile: "web: cd server && npm run build && npm run start"
+          procfile: "web: npm run start:server"
 

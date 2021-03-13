@@ -16,6 +16,10 @@
     "build": "concurrently \"npm:build:client\" \"npm:build:server\"",
     "heroku-postbuild": "npm run build:server"
   },
+  "engines": {
+    "node": "15.x",
+    "npm": "7.x"
+  },
   "workspaces": [
     "server",
     "client"

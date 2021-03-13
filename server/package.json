@@ -10,7 +10,8 @@
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts --transpileOnly -P tsconfig.json",
     "start": "node build/server/src/index.js",
     "release": "semantic-release",
-    "release:dry": "semantic-release -d"
+    "release:dry": "semantic-release -d",
+    "heroku-postbuild": "echo \"App already built, skipping\""
   },
   "author": "",
   "license": "ISC",

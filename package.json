@@ -4,6 +4,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "scripts": {
     "start:client": "cd client && npm run start",
+    "start:server": "cd server && npm run start",
     "dev:server": "cd server && npm run dev",
     "lint": "eslint . --format=pretty --ext .ts,tsx",
     "lint:fix": "eslint . --format=pretty --ext .ts,tsx --fix",

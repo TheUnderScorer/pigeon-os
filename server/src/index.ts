@@ -9,7 +9,7 @@ async function main() {
   const port = container.resolve<number>('port');
   const server = container.resolve<FastifyInstance>('server');
 
-  server.listen(port).then((url) => {
+  server.listen(port, '0.0.0.0').then((url) => {
     console.log(`Server started on ${url}`);
   });
 }

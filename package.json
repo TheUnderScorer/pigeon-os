@@ -13,7 +13,8 @@
     "release:client": "cd client && npm run release",
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
-    "build": "concurrently \"npm:build:client\" \"npm:build:server\""
+    "build": "concurrently \"npm:build:client\" \"npm:build:server\"",
+    "heroku-postbuild": "echo \"Skipping heroku build\""
   },
   "workspaces": [
     "server",

@@ -40,7 +40,7 @@
   },
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true craco start",
-    "build": "SKIP_PREFLIGHT_CHECK=true craco build",
+    "build": "SKIP_PREFLIGHT_CHECK=true REACT_APP_VERSION=$(node -p 'require(\"./package.json\").version') craco build",
     "release": "semantic-release",
     "release:dry": "semantic-release -d"
   },
